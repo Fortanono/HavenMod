@@ -23,17 +23,17 @@ namespace HavenMod.Items
 		}
 		public override void GetWeaponDamage(Player player, ref int damage)
 		{
-			damage = (int)(damage * ExampleDamagePlayer.ModPlayer(player).chemicalDamage + 5E-06f);
+			damage = (int)(damage * chemicalplayer.ModPlayer(player).chemicalDamage + 5E-06f);
 		}
 
 		public override void GetWeaponKnockback(Player player, ref float knockback)
 		{
-			knockback = knockback + ExampleDamagePlayer.ModPlayer(player).chemicalKnockback;
+			knockback = knockback + chemicalplayer.ModPlayer(player).chemicalKnockback;
 		}
 
 		public override void GetWeaponCrit(Player player, ref int crit)
 		{
-			crit = crit + ExampleDamagePlayer.ModPlayer(player).chemicalCrit;
+			crit = crit + chemicalplayer.ModPlayer(player).chemicalCrit;
 		}
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
