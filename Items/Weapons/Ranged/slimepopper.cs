@@ -16,8 +16,8 @@ namespace HavenMod.Items.Weapons.Ranged
 		{
 			item.damage = 15;
 			item.ranged = true;
-			item.width = 30;
-			item.height = 20;
+			item.width = 15;
+			item.height = 10;
 			item.useTime = 11;
 			item.useAnimation = 11;
 			item.useStyle = 5;
@@ -26,7 +26,7 @@ namespace HavenMod.Items.Weapons.Ranged
 			item.value = Item.buyPrice(0, 3, 0, 0);
 			item.rare = 2;
 			item.UseSound = SoundID.Item11;
-			item.autoReuse = true;
+			item.autoReuse = false;
 			item.shoot = 10;
 			item.shootSpeed = 16f;
 			item.useAmmo = AmmoID.Bullet;
