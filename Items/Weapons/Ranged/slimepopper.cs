@@ -14,33 +14,20 @@ namespace HavenMod.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
+			item.CloneDefaults(ItemID.FlintlockPistol);
 			item.damage = 15;
-			item.ranged = true;
-			item.width = 15;
-			item.height = 10;
 			item.useTime = 11;
+			item.width = 18;
+			item.height = 11;
 			item.useAnimation = 11;
 			item.useStyle = 5;
-			item.noMelee = true; 
 			item.knockBack = 4;
 			item.value = Item.buyPrice(0, 3, 0, 0);
 			item.rare = 2;
-			item.UseSound = SoundID.Item11;
-			item.autoReuse = false;
 			item.shoot = 10;
-			item.shootSpeed = 16f;
-			item.useAmmo = AmmoID.Bullet;
+			item.shootSpeed = 8f;
+			item.autoReuse = false;
 		}
-
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-		{
-			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
-			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
-			{
-				position += muzzleOffset;
-			}
-            return true;
-        }
 
 		public override void AddRecipes()
 		{
