@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace HavenMod.Items
+namespace HavenMod.Items.Weapons.Melee
 {
 	public class jelliedcleaver : ModItem
 	{

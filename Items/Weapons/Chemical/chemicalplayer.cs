@@ -5,7 +5,7 @@ using System.Text;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace HavenMod.Items
+namespace HavenMod.Items.Weapons.Chemical
 {
 	// This class stores necessary player info for our custom damage class, such as damage multipliers and additions to knockback and crit.
 	public class chemicalplayer : ModPlayer

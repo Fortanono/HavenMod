@@ -3,26 +3,26 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace HavenMod.Items
+namespace HavenMod.Items.Weapons.Melee
 {
-	public class thermalblade : ModItem
+	public class athenaswrath : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Thermal Blade");
-			Tooltip.SetDefault("Wield the power of fire and frost\nUnleashes temperatures at both extremes");
+			DisplayName.SetDefault("Athena's Wrath");
+			Tooltip.SetDefault("Unleashes powerful greek fire and splashes ichor on enemies");
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 53;
+			item.damage = 36;
 			item.melee = true;
 			item.width = 40;
 			item.height = 80;
-			item.useTime = 19;
-			item.useAnimation = 19;
+			item.useTime = 17;
+			item.useAnimation = 17;
 			item.useStyle = 1;
 			item.knockBack = 3;
-			item.value = Item.buyPrice(gold: 3);
+			item.value = Item.buyPrice(gold: 7);
 			item.rare = 5;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
@@ -31,8 +31,7 @@ namespace HavenMod.Items
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.FrostCore, 2);
-			recipe.AddIngredient(ItemID.HellstoneBar, 18);
+			recipe.AddIngredient(null, "olympiumbar", 18);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
@@ -42,15 +41,14 @@ namespace HavenMod.Items
 		{
 			if (Main.rand.Next(3) == 0)
 			{
-				//Emit dusts when swing the sword
-				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 6);
+				Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 228);
 			}
 		}
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
 		{
-			target.AddBuff(BuffID.OnFire, 300);
-			target.AddBuff(BuffID.Frostburn, 300);
+			target.AddBuff(mod.BuffType("greekfire"), 300);
+            target.AddBuff(BuffID.Ichor, 300);
 		}
 	}
 }

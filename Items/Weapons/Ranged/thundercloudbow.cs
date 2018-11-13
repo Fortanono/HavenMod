@@ -3,14 +3,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace HavenMod.Items
+namespace HavenMod.Items.Weapons.Ranged
 {
     public class thundercloudbow : ModItem
     {
         public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Thundercloud Bow");
-			Tooltip.SetDefault("Fires a burst of two arrows\nTransforms wooden arrows into Jester's Arrows");   
+			Tooltip.SetDefault("Haven Mod's second item\nFires a burst of two arrows\nTransforms wooden arrows into Jester's Arrows");   
         }
         public override void SetDefaults()
         {

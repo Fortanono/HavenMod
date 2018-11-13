@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace HavenMod.Items
+namespace HavenMod.Items.Weapons.Melee
 {
 	public class areswarpike : ModItem
 	{
@@ -10,7 +10,7 @@ namespace HavenMod.Items
 		{
 			item.damage = 29;
 			item.useStyle = 5;
-			item.useAnimation = 28;
+			item.useAnimation = 23;
 			item.useTime = 23;
 			item.shootSpeed = 3.3f;
 			item.knockBack = 10f;

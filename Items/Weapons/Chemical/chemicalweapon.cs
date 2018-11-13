@@ -5,7 +5,7 @@ using System.Text;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace HavenMod.Items
+namespace HavenMod.Items.Weapons.Chemical
 {
 	public abstract class chemicalweapon : ModItem
 	{
