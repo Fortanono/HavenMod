@@ -16,8 +16,7 @@ namespace HavenMod.NPCs
 
                 if (!ModNameWorld.spawnOre)
                 {                                                          //  R    G    B   Values
-                    if (NPC.downedSlimeKing)
-                    {
+
                         Main.NewText("Compressed gel forms in the icy caverns...", 32, 211, 214);
                         for (int k = 0; k < (int)((double)(WorldGen.rockLayer * Main.maxTilesY) * 30E-05); k++)   //40E-05 is the amount of veins that will spawn
                         {
@@ -34,7 +33,6 @@ namespace HavenMod.NPCs
                                 WorldGen.OreRunner(X, Y, WorldGen.genRand.Next(9, 15), WorldGen.genRand.Next(5, 9), (ushort)mod.TileType("cryogelore"));
                             }
                         }
-                    }
                 }
                 ModNameWorld.spawnOre = true;
             }
