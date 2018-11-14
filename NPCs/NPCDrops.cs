@@ -18,7 +18,7 @@ namespace HavenMod.NPCs
                 {                                                          //  R    G    B   Values
 
                         Main.NewText("Compressed gel forms in the icy caverns...", 32, 211, 214);
-                        for (int k = 0; k < (int)((double)(WorldGen.rockLayer * Main.maxTilesY) * 30E-05); k++)   //40E-05 is the amount of veins that will spawn
+                        for (int k = 0; k < (int)((double)(WorldGen.rockLayer * Main.maxTilesY) * 10E-05); k++)   //40E-05 is the amount of veins that will spawn
                         {
                             int X = WorldGen.genRand.Next(0, Main.maxTilesX);
                             int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer, Main.maxTilesY - 200); //this is the coordinates where the veins ore will spawn, so in Cavern layer
