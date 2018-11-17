@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace HavenMod
 {
-    public class ModNameWorld : ModWorld
+    public class MWorld : ModWorld
     {
         public static bool spawnOre = false;
 

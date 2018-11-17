@@ -14,7 +14,7 @@ namespace HavenMod.NPCs
             {
 
 
-                if (!ModNameWorld.spawnOre)
+                if (!MWorld.spawnOre && Main.hardMode == false)
                 {                                                          //  R    G    B   Values
 
                         Main.NewText("Compressed gel forms in the icy caverns...", 32, 211, 214);
@@ -34,7 +34,7 @@ namespace HavenMod.NPCs
                             }
                         }
                 }
-                ModNameWorld.spawnOre = true;
+                MWorld.spawnOre = true;
             }
         }
     }
