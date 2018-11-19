@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 
 namespace HavenMod.Items.Weapons.Chemical
 {
-    public class slimespurt : ChemicalWeapon
+    public class slimespurt : chemicalweapon
     {
          public override void SetDefaults()
 		{
@@ -33,9 +33,18 @@ namespace HavenMod.Items.Weapons.Chemical
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            if(havenmodplayer.ModPlayer(player).PotassiumEquipped == true)
+            havenmodplayer hmp = havenmodplayer.ModPlayer(player);
+			if(hmp.PotassiumEquipped == true)
             {
                type = mod.ProjectileType("potassiumreactantproj");
+			}
+			if(hmp.SaltEquipped == true)
+            {
+               type = mod.ProjectileType("saltreactantproj");
+			}
+			if(hmp.TotalWaterReactants > 1)
+            {
+               type = 358;
 			}
 		return true;
         }
