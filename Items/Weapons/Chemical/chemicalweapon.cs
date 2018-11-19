@@ -12,7 +12,7 @@ namespace HavenMod.Items.Weapons.Chemical
 		public virtual void SafeSetDefaults()
 		{
 		}
-		public sealed override void SetDefaults()
+		public override void SetDefaults()
 		{
 			SafeSetDefaults();
 			item.melee = false;
@@ -23,17 +23,17 @@ namespace HavenMod.Items.Weapons.Chemical
 		}
 		public override void GetWeaponDamage(Player player, ref int damage)
 		{
-			damage = (int)(damage * chemicalplayer.ModPlayer(player).chemicalDamage + 5E-06f);
+			damage = (int)(damage * havenmodplayer.ModPlayer(player).chemicalDamage + 5E-06f);
 		}
 
 		public override void GetWeaponKnockback(Player player, ref float knockback)
 		{
-			knockback = knockback + chemicalplayer.ModPlayer(player).chemicalKnockback;
+			knockback = knockback + havenmodplayer.ModPlayer(player).chemicalKnockback;
 		}
 
 		public override void GetWeaponCrit(Player player, ref int crit)
 		{
-			crit = crit + chemicalplayer.ModPlayer(player).chemicalCrit;
+			crit = crit + havenmodplayer.ModPlayer(player).chemicalCrit;
 		}
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
