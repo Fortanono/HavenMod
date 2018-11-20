@@ -18,7 +18,7 @@ namespace HavenMod.Items.Weapons.Chemical
 			item.useStyle = 5;
 			item.useAnimation = 25;
 			item.useTime = 25;
-			item.shootSpeed = 7.7f;
+			item.shootSpeed = 14.7f;
 			item.knockBack = 5f;
 			item.width = 23;
 			item.height = 16;
@@ -41,6 +41,14 @@ namespace HavenMod.Items.Weapons.Chemical
 			if(hmp.SaltEquipped == true)
             {
                type = mod.ProjectileType("saltreactantproj");
+			}
+			if(hmp.SaplingEquipped == true)
+			{
+				type = mod.ProjectileType("saplingproj");
+			}
+			if(hmp.JungleBlossomEquipped == true)
+			{
+				type = mod.ProjectileType("jungleblossomproj");
 			}
 			if(hmp.TotalWaterReactants > 1)
             {

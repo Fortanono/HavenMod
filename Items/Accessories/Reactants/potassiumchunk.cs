@@ -23,6 +23,7 @@ namespace HavenMod.Items.Accessories.Reactants
         {
             player.GetModPlayer<havenmodplayer>(mod).PotassiumEquipped = true;
             player.GetModPlayer<havenmodplayer>(mod).WaterReactantEquipped = true;
+            player.GetModPlayer<havenmodplayer>(mod).TotalWaterReactants += 1;
         }
     }
 }

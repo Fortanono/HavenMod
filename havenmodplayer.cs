@@ -52,6 +52,7 @@ namespace HavenMod.Items
 		public bool SaltwaterRelicEquipped = false;
 		public bool PottedTannenbaumEquipped = false;
 		public bool FranciumEquipped = false;
+		public int TotalWaterReactants = 0;
 
 		public float chemicalDamage = 1f;
 		public float chemicalKnockback = 0f;
@@ -98,6 +99,7 @@ namespace HavenMod.Items
 		    SaltwaterRelicEquipped = false;
 		    PottedTannenbaumEquipped = false;
 		    FranciumEquipped = false;
+			TotalWaterReactants = 0;
 		}
 
 		public override void UpdateDead()
