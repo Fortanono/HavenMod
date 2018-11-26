@@ -56,6 +56,15 @@ namespace HavenMod.Items.Weapons.Chemical
 			}
 		return true;
         }
+	public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(null, "cryogelbar", 12);
+			recipe.AddIngredient(ItemID.BottledWater, 5);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
 
         public override void SetStaticDefaults()
         {
