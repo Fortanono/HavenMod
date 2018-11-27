@@ -10,7 +10,7 @@ namespace HavenMod.Projectiles
         {
             projectile.aiStyle = 1;
             projectile.friendly = true;
-            projectile.penetrate = -1;
+            projectile.penetrate = 4;
             projectile.width = 32;
             projectile.height = 40;
             projectile.timeLeft = 600;
