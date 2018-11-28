@@ -14,11 +14,11 @@ namespace HavenMod.Items.Weapons.Chemical
     {
          public override void SetDefaults()
 		{
-			item.damage = 36;
+			item.damage = 40;
 			item.useStyle = 5;
-			item.useAnimation = 30;
-			item.useTime = 30;
-			item.shootSpeed = 10f;
+			item.useAnimation = 27;
+			item.useTime = 27;
+			item.shootSpeed = 8.9f;
 			item.knockBack = 5f;
 			item.width = 50;
 			item.height = 22;
