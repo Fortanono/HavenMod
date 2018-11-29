@@ -27,6 +27,17 @@ namespace HavenMod.NPCs.Enemies
 			aiType = NPCID.PirateDeadeye;
 			animationType = NPCID.PirateDeadeye;
 		}
+		
+	public override void NPCLoot()
+        {
+
+            Item.NewItem(npc.getRect(), mod.ItemType("leadedbullet"), Main.rand.Next(5, 8));
+
+            if (Main.rand.Next(7) == 0)
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("SaloonAle"), 1);
+            }
+        }
 
         public override void AI()
         {
