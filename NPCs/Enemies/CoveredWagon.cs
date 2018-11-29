@@ -25,6 +25,7 @@ namespace HavenMod.NPCs.Enemies
             npc.value = 500f;
             npc.knockBackResist = 0.01f;
             npc.aiStyle = 3;
+			npc.scale = 3f;
             aiType = NPCID.Crab;
             animationType = NPCID.Crab;
         }
