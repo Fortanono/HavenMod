@@ -31,7 +31,7 @@ namespace HavenMod.NPCs.Enemies
         public override void NPCLoot()
         {
 
-            Item.NewItem(npc.getRect(), mod.ItemType("LeadstoneBullet"), Main.rand.Next(5, 8));
+            Item.NewItem(npc.getRect(), mod.ItemType("leadedbullet"), Main.rand.Next(5, 8));
 
             if (Main.rand.Next(7) == 0)
             {
