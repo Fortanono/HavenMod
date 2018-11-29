@@ -123,6 +123,10 @@ namespace ExampleMod.NPCs
 			nextSlot++;
 			shop.item[nextSlot].SetDefaults(mod.ItemType("lumberpile"));
 			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("waterhole"));
+			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("swinginrifle"));
+			nextSlot++;
 		}
 
 		public override void NPCLoot()
