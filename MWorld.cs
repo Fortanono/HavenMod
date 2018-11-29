@@ -18,7 +18,8 @@ namespace HavenMod
 {
     public class MWorld : ModWorld
     {
-        public static bool spawnOre = false;
+        public static bool dungueonInvasionUp = false;
+        public static bool downedDungueonInvasion = false;
 public override void PostWorldGen()
 		{
 
@@ -41,6 +42,62 @@ public override void PostWorldGen()
 				}
 			}
 		}
+		
+		        //Initialize all variables to their default values
+        public override void Initialize()
+        {
+            Main.invasionSize = 0;
+            dungueonInvasionUp = false;
+            downedDungueonInvasion = false;
+        }
+
+        //Save downed data
+        public override TagCompound Save()
+        {
+            var downed = new List<string>();
+            if (downedDungueonInvasion) downed.Add("dungueonInvasion");
+
+            return new TagCompound {
+                {"downed", downed}
+            };
+        }
+
+        //Load downed data
+        public override void Load(TagCompound tag)
+        {
+            var downed = tag.GetList<string>("downed");
+            downedDungueonInvasion = downed.Contains("dungueonInvasion");
+        }
+
+        //Sync downed data
+        public override void NetSend(BinaryWriter writer)
+        {
+            BitsByte flags = new BitsByte();
+            flags[0] = downedDungueonInvasion;
+            writer.Write(flags);
+        }
+
+        //Sync downed data
+        public override void NetReceive(BinaryReader reader)
+        {
+            BitsByte flags = reader.ReadByte();
+            downedDungueonInvasion = flags[0];
+        }
+
+        //Allow to update invasion while game is running
+        public override void PostUpdate()
+        {
+            if (dungueonInvasionUp)
+            {
+                if (Main.invasionX == (double)Main.spawnTileX)
+                {
+                    //Checks progress and reports progress only if invasion at spawn
+                    DungueonInvasion.CheckDungueonInvasionProgress();
+                }
+                //Updates the dungeon invasion while it heads to spawn point and ends it
+                DungueonInvasion.UpdateDungueonInvasion();
+            }
+        }
     }
     }
    
