@@ -17,6 +17,14 @@ namespace HavenMod.Projectiles
 			projectile.CloneDefaults(ProjectileID.CrystalShard);
 			aiType = ProjectileID.CrystalShard;
 		}
+		public override void AI()
+		{
+		int dustnumber = Dust.NewDust(projectile.position, projectile.width, projectile.height, 269, 0f, 0f, 200, default(Color), .8f);
+		}
+		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		{
+            target.AddBuff(72, 20);
+		}
 
 	}
 }

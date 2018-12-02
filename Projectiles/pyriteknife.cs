@@ -28,6 +28,14 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 			return true;
 		}
 		
-		
+		public override void AI()
+		{
+		int dustnumber = Dust.NewDust(projectile.position, projectile.width, projectile.height, 269, 0f, 0f, 200, default(Color), 1f);
+		}
+		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		{
+            target.AddBuff(72, 180);
+		}
 	}
-}
+	}
+
