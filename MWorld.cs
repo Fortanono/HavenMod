@@ -99,6 +99,4 @@ public override void PostWorldGen()
             }
         }
     }
-    }
-   
 }
