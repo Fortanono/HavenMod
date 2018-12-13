@@ -57,7 +57,7 @@ namespace ExampleMod.NPCs
 
 		public override bool CanTownNPCSpawn(int numTownNPCs, int money)
 		{
-            if (DungueonInvasion.arecowboysdefeated = true)
+            if (MWorld.downedDungueonInvasion = true)
             {
                return true;
             }
