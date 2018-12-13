@@ -57,7 +57,7 @@ namespace ExampleMod.NPCs
 
 		public override bool CanTownNPCSpawn(int numTownNPCs, int money)
 		{
-            if (MWorld.downedDungueonInvasion = true)
+            if (DungueonInvasion.arecowboysdefeated = true)
             {
                return true;
             }
@@ -91,12 +91,14 @@ namespace ExampleMod.NPCs
 			{
 				return "I think " + Main.npc[partyGirl].GivenName + " is hiding something from me.";
 			}
-			switch (Main.rand.Next(3))
+			switch (Main.rand.Next(4))
 			{
 				case 0:
 					return "Do you want to get locked up?";
 				case 1:
 					return "I got everything you need.";
+				case 2:
+					return "My prices have never been lower.";
 				default:
 					return "It's high noon somewhere, right?";
 			}
@@ -117,7 +119,7 @@ namespace ExampleMod.NPCs
 
 		public override void SetupShop(Chest shop, ref int nextSlot)
 		{
-			shop.item[nextSlot].SetDefaults(mod.ItemType("leadstoneBullet"));
+			shop.item[nextSlot].SetDefaults(mod.ItemType("leadedbullet"));
 			nextSlot++;
 			shop.item[nextSlot].SetDefaults(mod.ItemType("SaloonAle"));
 			nextSlot++;
@@ -126,6 +128,14 @@ namespace ExampleMod.NPCs
 			shop.item[nextSlot].SetDefaults(mod.ItemType("waterhole"));
 			nextSlot++;
 			shop.item[nextSlot].SetDefaults(mod.ItemType("swinginrifle"));
+			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("desertdart"));
+			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("minicoyote"));
+			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("melter"));
+			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("tumbleweedscimitar"));
 			nextSlot++;
 		}
 
