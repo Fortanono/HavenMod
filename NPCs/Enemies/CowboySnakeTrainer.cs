@@ -37,7 +37,7 @@ namespace HavenMod.NPCs.Enemies
         {
             npc.TargetClosest(true);
             timer++; //or "npc.ai[0] += 1;", works the same way
-            if (timer >= 300)
+            if (timer >= 600)
             {
                 Vector2 spawnAt = npc.Center + new Vector2(0f, (float)npc.height / 2f);
 				NPC.NewNPC((int)spawnAt.X, (int)spawnAt.Y, mod.NPCType("DesertViper"));
