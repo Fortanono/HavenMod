@@ -50,7 +50,7 @@ namespace HavenMod
             //Change spawn stuff if invasion up and invasion at spawn
             if (MWorld.dungueonInvasionUp && (Main.invasionX == (double)Main.spawnTileX))
             {
-                spawnRate = 100;
+                spawnRate = 150;
                 maxSpawns = 100;
             }
         }
