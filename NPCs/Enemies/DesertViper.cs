@@ -21,7 +21,7 @@ namespace HavenMod.NPCs.Enemies
             npc.height = 40;
             npc.damage = 14;
             npc.defense = 0;
-            npc.lifeMax = 50;
+            npc.lifeMax = 1;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 60f;
@@ -41,7 +41,7 @@ namespace HavenMod.NPCs.Enemies
             {
                 float Speed = 12f;
                 Vector2 vector8 = new Vector2(npc.position.X + (npc.width / 2), npc.position.Y + (npc.height / 2));
-                int damage = 15;
+                int damage = 11;
                 int type = 572; // projectile type
                 Main.PlaySound(2, (int) npc.position.X, (int) npc.position.Y, 17);
                 float rotation = (float) Math.Atan2(vector8.Y-(Main.player[npc.target].position.Y+(Main.player[npc.target].height * 0.5f)), vector8.X-(Main.player[npc.target].position.X+(Main.player[npc.target].width * 0.5f)));
