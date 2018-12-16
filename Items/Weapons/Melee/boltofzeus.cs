@@ -16,8 +16,8 @@ namespace HavenMod.Items.Weapons.Melee
 		{
 			item.damage = 41;
 			item.melee = true;
-			item.width = 10000;
-			item.height = 20;
+			item.width = 40;
+			item.height = 40;
 			item.useTime = 25;
 			item.useAnimation = 25;
 			item.useStyle = 3;
