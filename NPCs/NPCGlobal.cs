@@ -13,11 +13,18 @@ namespace HavenMod.NPCs
             {
                 if (npc.type == NPCID.Crab || npc.type == NPCID.Shark || npc.type == NPCID.Squid || npc.type == NPCID.SeaSnail)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Coralite"), 6 + Main.rand.Next(9));
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Coralite"), 3 + Main.rand.Next(6));
                 }
 				
             }
-
+if (Main.rand.Next(4) == 1)
+            {
+                if (npc.type == NPCID.PinkJellyfish)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Coralite"), 2 + Main.rand.Next(4));
+                }
+				
+            }
             if (Main.rand.Next(2) == 1)
             {
                 if (npc.type == NPCID.WyvernHead)
