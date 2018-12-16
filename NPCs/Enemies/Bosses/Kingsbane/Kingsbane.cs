@@ -34,6 +34,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
             npc.noTileCollide = true;
             npc.HitSound = SoundID.NPCHit4;
             npc.DeathSound = SoundID.NPCHit33;
+			bossBag = mod.ItemType("kingsbag");
             npc.buffImmune[24] = true;
             npc.netAlways = true;
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/SphereAssault");
@@ -362,8 +363,16 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
             }
         }
         public override void NPCLoot()
-        {
-            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DeadlordEmblem"), 15 + Main.rand.Next(15));
-        }
+		{
+
+			if (Main.expertMode)
+			{
+				npc.DropBossBags();
+			}
+			else
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DeadlordEmblem"), 20 + Main.rand.Next(18));
+			}
+		}
     }
 }
