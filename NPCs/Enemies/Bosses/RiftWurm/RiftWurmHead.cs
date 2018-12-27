@@ -316,13 +316,20 @@ namespace HavenMod.NPCs.Enemies.Bosses.RiftWurm
 			
             return false;
         }
-		
+		int minion = 0;
 		public override void AI()
 		{	
 			float r = 252/255;
 			float b = 120/255;
 			float g = 32/255;
-
+minion++; //or "npc.ai[0] += 1;", works the same way
+            if (minion >= 450)
+            {
+                Vector2 spawnAt = npc.Center + new Vector2(0f, (float)npc.height / 2f);
+				NPC.NewNPC((int)spawnAt.X, (int)spawnAt.Y, mod.NPCType("GalaxiumDrone"));
+                Main.PlaySound(2, (int) npc.position.X, (int) npc.position.Y, 8);
+                minion = 0;
+            }
 			//Center of the npc
 			//You can just set the positions to npc.Center.X and npc.Center.Y
 		  

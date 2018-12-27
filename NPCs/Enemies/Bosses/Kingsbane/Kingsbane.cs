@@ -70,6 +70,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
             int frame = (int)npc.frameCounter;
             npc.frame.Y = frame * frameHeight;
         }
+		int minion = 0;
         public override void AI()
         {
             npc.noGravity = true;
@@ -79,6 +80,14 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
             if (npc.target < 0 || npc.target == 255 || Main.player[npc.target].dead)
             {
                 npc.TargetClosest(true);
+            }
+			minion++; //or "npc.ai[0] += 1;", works the same way
+            if (minion >= 600)
+            {
+                Vector2 spawnAt = npc.Center + new Vector2(0f, (float)npc.height / 2f);
+				NPC.NewNPC((int)spawnAt.X, (int)spawnAt.Y, mod.NPCType("CursedBlade"));
+                Main.PlaySound(2, (int) npc.position.X, (int) npc.position.Y, 8);
+                minion = 0;
             }
             if (npc.ai[3] == 1)
             {

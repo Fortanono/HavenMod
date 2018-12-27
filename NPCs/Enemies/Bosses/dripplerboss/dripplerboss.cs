@@ -13,17 +13,16 @@ namespace HavenMod.NPCs.Enemies.Bosses.dripplerboss
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Globler");
-            Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.Drippler];
         }
 
         public override void SetDefaults()
         {
             npc.width = 18;
             npc.height = 40;
-            npc.damage = 45;
+            npc.damage = 30;
             npc.defense = 15;
 			npc.noTileCollide = true;
-            npc.lifeMax = 5500;
+            npc.lifeMax = 3500;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.value = 60000f;
@@ -33,7 +32,12 @@ namespace HavenMod.NPCs.Enemies.Bosses.dripplerboss
             npc.boss = true;
             npc.noGravity = true;
             npc.npcSlots = 5f;
-            animationType = NPCID.Drippler;
+        }
+		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
+        {
+            npc.damage = 55;
+            npc.defense = 25;
+            npc.lifeMax = (int)(npc.lifeMax * 1f * bossLifeScale); //double health in expert mode and stacked with amount of players.
         }
         bool Phase2 = false;
         public override void AI()
