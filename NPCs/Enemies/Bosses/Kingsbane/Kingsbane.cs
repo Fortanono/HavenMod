@@ -54,10 +54,13 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
                 Main.dust[num624].velocity *= 4f;
             }
             if (npc.life <= 0)
-            {
+            {Vector2 pos = npc.position + new Vector2(Main.rand.Next(npc.width - 8), Main.rand.Next(npc.height / 2));
+					Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/blade1"), 1f);
+					Gore.NewGore(pos, npc.velocity, mod.GetGoreSlot("Gores/blade2"), 1f);
                 for (int num623 = 0; num623 < 100; num623++)
                 {
                     int num624 = Dust.NewDust(new Vector2(npc.position.X, npc.position.Y), npc.width, npc.height, 91, 0f, 0f, 100, default(Color), 2f);
+					
                     Main.dust[num624].noGravity = true;
                     Main.dust[num624].velocity *= 4f;
                 }
