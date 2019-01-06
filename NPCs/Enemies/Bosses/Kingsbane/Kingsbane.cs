@@ -19,7 +19,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
         public override void SetDefaults()
         {
             npc.aiStyle = -1;
-            npc.lifeMax = 4500;
+            npc.lifeMax = 6800;
             npc.damage = 34;
             npc.defense = 16;
             npc.knockBackResist = 0f;
@@ -37,7 +37,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
 			bossBag = mod.ItemType("kingsbag");
             npc.buffImmune[24] = true;
             npc.netAlways = true;
-			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/SphereAssault");
+			music = MusicID.Boss5;
         }
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {

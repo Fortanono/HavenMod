@@ -17,7 +17,7 @@ namespace HavenMod.Items.Weapons.Chemical
 			item.damage = 40;
 			item.useStyle = 5;
 			item.useAnimation = 27;
-			item.useTime = 27;
+			item.useTime = 23;
 			item.shootSpeed = 8.9f;
 			item.knockBack = 5f;
 			item.width = 50;

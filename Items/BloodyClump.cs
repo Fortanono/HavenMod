@@ -8,7 +8,7 @@ namespace HavenMod.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Feels like your holding a blot clot. Oh wait...");
+			Tooltip.SetDefault("Summons Globler");
 		}
 
 		public override void SetDefaults()
@@ -39,7 +39,13 @@ namespace HavenMod.Items
 		public override void AddRecipes()
 		{
             ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.CrimtaneBar, 12);
+			recipe.AddIngredient(ItemID.Vertebrae, 25);
+            recipe.SetResult(this);
+            recipe.AddTile(16);
+            recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.Leather, 5);
             recipe.SetResult(this);
             recipe.AddTile(16);
             recipe.AddRecipe();

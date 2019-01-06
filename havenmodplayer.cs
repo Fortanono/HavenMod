@@ -54,6 +54,11 @@ namespace HavenMod.Items
 		public bool FranciumEquipped = false;
 		public int TotalWaterReactants = 0;
 
+		public bool ElectricReactantEquipped = false;
+		public bool KryptonGasEquipped = false;
+		public bool NeonGasEquipped = false;
+		public int TotalElectricReactants = 0;
+
 		public float chemicalDamage = 1f;
 		public float chemicalKnockback = 0f;
 		public int chemicalCrit = 0;
@@ -100,6 +105,10 @@ namespace HavenMod.Items
 		    PottedTannenbaumEquipped = false;
 		    FranciumEquipped = false;
 			TotalWaterReactants = 0;
+			ElectricReactantEquipped = false;
+		    KryptonGasEquipped = false;
+		    NeonGasEquipped = false;
+		    TotalElectricReactants = 0;
 		}
 
 		public override void UpdateDead()

@@ -32,6 +32,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.dripplerboss
             npc.boss = true;
             npc.noGravity = true;
             npc.npcSlots = 5f;
+            music = MusicID.Boss5;
         }
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {

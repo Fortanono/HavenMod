@@ -30,15 +30,5 @@ namespace HavenMod.Items.Weapons.Ranged
 			item.UseSound = SoundID.Item14;
 			item.autoReuse = true;
 		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.FlintlockPistol, 1);
-			recipe.AddIngredient(null, "cryogelbar", 9);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
     }
 }

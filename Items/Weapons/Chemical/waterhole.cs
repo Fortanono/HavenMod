@@ -14,7 +14,7 @@ namespace HavenMod.Items.Weapons.Chemical
     {
          public override void SetDefaults()
 		{
-			item.damage = 11;
+			item.damage = 23;
 			item.useStyle = 5;
 			item.useAnimation = 12;
 			item.useTime = 2;
