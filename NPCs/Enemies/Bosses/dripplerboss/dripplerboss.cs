@@ -20,7 +20,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.dripplerboss
             npc.width = 18;
             npc.height = 40;
             npc.damage = 30;
-            npc.defense = 15;
+            npc.defense = 8;
 			npc.noTileCollide = true;
             npc.lifeMax = 3500;
             npc.HitSound = SoundID.NPCHit1;
