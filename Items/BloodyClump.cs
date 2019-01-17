@@ -40,13 +40,15 @@ namespace HavenMod.Items
 		public override void AddRecipes()
 		{
             ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Vertebrae, 25);
+			recipe.AddIngredient(ItemID.TissueSample, 12);
+			recipe.AddIngredient(ItemID.CrimtaneBar, 5);
             recipe.SetResult(this);
             recipe.AddTile(16);
             recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Leather, 5);
+			recipe.AddIngredient(ItemID.ShadowScale, 12);
+			recipe.AddIngredient(ItemID.DemoniteBar, 5);
             recipe.SetResult(this);
             recipe.AddTile(16);
             recipe.AddRecipe();
