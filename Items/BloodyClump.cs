@@ -9,6 +9,7 @@ namespace HavenMod.Items
 		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("Summons The Clot");
+			DisplayName.SetDefault("Blood Ritual");
 		}
 
 		public override void SetDefaults()
