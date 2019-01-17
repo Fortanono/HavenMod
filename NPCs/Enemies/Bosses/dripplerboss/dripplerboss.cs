@@ -12,7 +12,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.dripplerboss
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Globler");
+            DisplayName.SetDefault("The Clot");
         }
 
         public override void SetDefaults()
