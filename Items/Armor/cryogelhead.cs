@@ -11,7 +11,7 @@ namespace HavenMod.Items.Armor
 		{
 			base.SetStaticDefaults();
 			DisplayName.SetDefault("Cryogel Hat");
-			Tooltip.SetDefault("Why would you wear this, your ears will freeze off!"
+			Tooltip.SetDefault("Why would you wear this? your ears will freeze off!"
 				+ "\n10% increased chemical damage.");
 		}
 
