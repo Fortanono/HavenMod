@@ -8,7 +8,7 @@ namespace HavenMod.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Summons Globler");
+			Tooltip.SetDefault("Summons The Clot");
 		}
 
 		public override void SetDefaults()
