@@ -34,5 +34,10 @@ namespace HavenMod.Items.Weapons.Ranged
 			item.useAmmo = AmmoID.Snowball;
 			item.shoot = 166;
 		}
+		
+		public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(2, 0);
+		}
 	}
 }
