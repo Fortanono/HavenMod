@@ -1,6 +1,4 @@
 using Terraria;
-using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace HavenMod.Items
@@ -11,6 +9,7 @@ namespace HavenMod.Items
         {
             item.rare = 1;
             item.maxStack = 99;
+            item.value = Item.buyPrice(0, 0, 0, 60);
         }
 
         public override void SetStaticDefaults()
