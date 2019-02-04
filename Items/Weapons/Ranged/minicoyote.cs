@@ -10,7 +10,7 @@ namespace HavenMod.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Mini Coyote");
-			Tooltip.SetDefault("High fire rate at the expense of accuracy\n50% chance not to consume ammo");
+			Tooltip.SetDefault("High fire rate at the expense of accuracy\n50% chance to not consume ammo");
 		}
 
 		public override void SetDefaults()
