@@ -35,22 +35,51 @@ if (Main.rand.Next(4) == 1)
             }
         }
         public bool greekfire = false;
+        public bool bloodywarjavelinbuff = false;
 
         public override void ResetEffects(NPC npc)
         {
             greekfire = false;
+            bloodywarjavelinbuff = false;
         }
 
-        public override void UpdateLifeRegen(NPC npc, ref int damage)
-        {
-            if (greekfire)
-            {
-                npc.lifeRegen -= 35;
-                if (damage < 2);
-            }
-        }
+        public override void SetDefaults(NPC npc)
+		{
+			npc.buffImmune[mod.BuffType<Buffs.bloodywarjavelinbuff>()] = npc.buffImmune[BuffID.BoneJavelin];
+		}
 
-                public override bool InstancePerEntity
+		public override void UpdateLifeRegen(NPC npc, ref int damage)
+		{
+			if (bloodywarjavelinbuff)
+			{
+				if (npc.lifeRegen > 0)
+				{
+					npc.lifeRegen = 0;
+				}
+				int bloodyJavelinCount = 0;
+				for (int i = 0; i < 1000; i++)
+				{
+					Projectile p = Main.projectile[i];
+					if (p.active && p.type == mod.ProjectileType<Projectiles.warjavelin>() && p.ai[0] == 1f && p.ai[1] == npc.whoAmI)
+					{
+						bloodyJavelinCount++;
+					}
+				}
+				npc.lifeRegen -= bloodyJavelinCount * 2 * 3;
+				if (damage < bloodyJavelinCount * 3)
+				{
+					damage = bloodyJavelinCount * 3;
+				}
+
+                if (greekfire)
+                {
+                    npc.lifeRegen -= 35;
+                    if (damage < 2);
+                }
+			}
+		}
+
+        public override bool InstancePerEntity
 		{
 			get
 			{
