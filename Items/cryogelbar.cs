@@ -9,7 +9,7 @@ namespace HavenMod.Items
         {
             item.rare = 1;
             item.maxStack = 99;
-            item.value = Item.buyPrice(0, 0, 0, 60);
+            item.value = Item.buyPrice(0, 0, 2, 0);
         }
 
         public override void SetStaticDefaults()
