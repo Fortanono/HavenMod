@@ -30,6 +30,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.dripplerboss
             npc.aiStyle = -1;
             npc.knockBackResist = 0f;
             npc.boss = true;
+            bossBag = mod.ItemType("dripplerbossbag"); 
             npc.noGravity = true;
             npc.npcSlots = 5f;
             music = MusicID.Boss5;
@@ -298,6 +299,46 @@ namespace HavenMod.NPCs.Enemies.Bosses.dripplerboss
                     Main.npc[num13].ai[1] = 240;
                     Main.npc[num13].ai[0] = npc.whoAmI;
                     npc.netUpdate = true;
+                }
+            }
+        }
+
+        public override void NPCLoot()
+        {
+			MWorld.DownedDripplerBoss = true;
+            if (Main.expertMode)
+            {
+                npc.DropBossBags();
+            }
+            if (!Main.expertMode)
+            {
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.HealingPotion, Main.rand.Next(4,12), false, 0, false, false);
+                switch (Main.rand.Next(4))
+                {
+                    case 0:
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("bloodywarjavelin"), 1, false, 0, false, false);
+                        break;
+                    case 1:
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("bloodblazer"), 1, false, 0, false, false);
+                        break;
+                    case 2:
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("forbiddenorb"), 1, false, 0, false, false);
+                        break;
+					case 3:
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("scarletstringbow"), 1, false, 0, false, false);
+                        break;
+                }
+                if (Main.rand.Next(7) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MoneyTrough"), 1, false, 0, false, false);
+                }
+                if (Main.rand.Next(7) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SharkToothNecklace"), 1, false, 0, false, false);
+                }
+                if (Main.rand.Next(7) == 0)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Sextant"), 1, false, 0, false, false);
                 }
             }
         }

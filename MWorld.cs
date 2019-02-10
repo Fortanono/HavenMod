@@ -20,6 +20,7 @@ namespace HavenMod
     {
         public static bool dungueonInvasionUp = false;
         public static bool downedDungueonInvasion = false;
+        public static bool DownedDripplerBoss = false;
 		private const int saveVersion = 0;
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
 		{

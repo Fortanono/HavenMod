@@ -9,7 +9,7 @@ namespace HavenMod.Items
 		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("Summons The Clot");
-			DisplayName.SetDefault("Blood Ritual");
+			DisplayName.SetDefault("Shaded Relic");
 		}
 
 		public override void SetDefaults()
@@ -40,15 +40,13 @@ namespace HavenMod.Items
 		public override void AddRecipes()
 		{
             ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.TissueSample, 12);
-			recipe.AddIngredient(ItemID.CrimtaneBar, 5);
+			recipe.AddIngredient(ItemID.Ebonwood, 75);
             recipe.SetResult(this);
             recipe.AddTile(16);
             recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.ShadowScale, 12);
-			recipe.AddIngredient(ItemID.DemoniteBar, 5);
+			recipe.AddIngredient(ItemID.Shadewood, 75);
             recipe.SetResult(this);
             recipe.AddTile(16);
             recipe.AddRecipe();

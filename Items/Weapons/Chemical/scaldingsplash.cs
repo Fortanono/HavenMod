@@ -50,6 +50,10 @@ namespace HavenMod.Items.Weapons.Chemical
 			{
 				type = mod.ProjectileType("jungleblossomproj");
 			}
+			if(hmp.ForbiddenOrbEquipped == true)
+			{
+				type = mod.ProjectileType("forbiddenburst");
+			}
 			if(hmp.TotalWaterReactants > 1)
             {
                type = 358;

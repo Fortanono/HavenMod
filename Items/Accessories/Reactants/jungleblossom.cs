@@ -31,7 +31,7 @@ namespace HavenMod.Items.Accessories.Reactants
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.NaturesGift);
             recipe.AddIngredient(ItemID.JungleSpores, 18);
-            recipe.AddIngredient(ItemID.Vine, 7);
+            recipe.AddIngredient(ItemID.Vine, 3);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

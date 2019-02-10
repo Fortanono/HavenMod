@@ -18,6 +18,7 @@ namespace HavenMod.Items
 		public bool SaplingEquipped = false;
 		public bool PotassiumEquipped = false;
 		public bool SaltEquipped = false;
+		public bool ForbiddenOrbEquipped = false;
 		public bool SodiumEquipped = false;
 		public bool StrangePottedPlantEquipped = false;
 		public bool MoltenCryogelEquipped = false;
@@ -70,6 +71,7 @@ namespace HavenMod.Items
 		    SaplingEquipped = false;
 		    PotassiumEquipped = false;
 		    SaltEquipped = false;
+			ForbiddenOrbEquipped = false;
 		    SodiumEquipped = false;
 		    StrangePottedPlantEquipped = false;
 		    MoltenCryogelEquipped = false;
