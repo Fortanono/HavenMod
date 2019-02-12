@@ -41,12 +41,14 @@ namespace HavenMod.Items
 		{
             ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Ebonwood, 75);
+			recipe.AddIngredient(ItemID.ShadowScale, 5);
             recipe.SetResult(this);
             recipe.AddTile(16);
             recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Shadewood, 75);
+			recipe.AddIngredient(ItemID.TissueSample, 5);
             recipe.SetResult(this);
             recipe.AddTile(16);
             recipe.AddRecipe();

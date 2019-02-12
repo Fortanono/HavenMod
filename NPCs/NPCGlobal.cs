@@ -15,6 +15,11 @@ namespace HavenMod.NPCs
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Coralite"), 3 + Main.rand.Next(6));
                 }
+
+                if (npc.type == NPCID.FaceMonster)
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BlackBile"), 3 + Main.rand.Next(6));
+                }
 				
             }
 if (Main.rand.Next(4) == 1)

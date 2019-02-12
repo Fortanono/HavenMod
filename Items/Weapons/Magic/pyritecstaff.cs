@@ -15,7 +15,7 @@ namespace HavenMod.Items.Weapons.Magic
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Pyrite Chill Staff");
-			Tooltip.SetDefault("Homes in on enemys.\nInflicts Frostburn on enemys, causing extra damage.");
+			Tooltip.SetDefault("Homes in on enemies\nAttacks will frostburn the enemy");
 			Item.staff[item.type] = true;
 		}
 

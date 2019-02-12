@@ -10,7 +10,7 @@ namespace HavenMod.Projectiles
     {
         public override void SetDefaults()
         {
-            projectile.width = 60;
+            projectile.width = 25;
             projectile.height = 2;
             projectile.scale = 1;
             projectile.timeLeft = 600;
@@ -23,11 +23,6 @@ namespace HavenMod.Projectiles
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blood Laser");
-        }
-
-        public virtual void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
-        {
-            player.AddBuff(105, 60);
         }
     }
 }

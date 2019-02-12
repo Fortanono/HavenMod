@@ -21,7 +21,7 @@ namespace HavenMod.NPCs.Enemies.Bosses.Kingsbane
             npc.aiStyle = -1;
             npc.lifeMax = 6800;
             npc.damage = 34;
-            npc.defense = 16;
+            npc.defense = 10;
             npc.knockBackResist = 0f;
             npc.width = 138;
             npc.height = 138;

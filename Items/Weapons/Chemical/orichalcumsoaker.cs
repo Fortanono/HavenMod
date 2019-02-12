@@ -10,20 +10,20 @@ using Terraria.ModLoader;
 
 namespace HavenMod.Items.Weapons.Chemical
 {
-    public class scaldingsplash : chemicalweapon
+    public class orichalcumsoaker : chemicalweapon
     {
          public override void SetDefaults()
 		{
-			item.damage = 18;
+			item.damage = 37;
 			item.useStyle = 5;
-			item.useAnimation = 27;
-			item.useTime = 23;
+			item.useAnimation = 18;
+			item.useTime = 18;
 			item.shootSpeed = 8.9f;
-			item.knockBack = 5f;
-			item.width = 50;
-			item.height = 22;
+			item.knockBack = 6.5f;
+			item.width = 32;
+			item.height = 32;
 			item.scale = 1f;
-			item.rare = 2;
+			item.rare = 4;
 			item.UseSound = SoundID.Item19;
             item.shoot = 358;
 			item.value = Item .buyPrice(0, 3, 5, 0);
@@ -63,14 +63,14 @@ namespace HavenMod.Items.Weapons.Chemical
 public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.HellstoneBar, 12);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.OrichalcumBar, 12);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Scalding Splash");
+            DisplayName.SetDefault("Orichalcum Soaker");
             Tooltip.SetDefault("[c/ADFF2F:~ ~ ~ Chemist Class ~ ~ ~]\nFires a harmless bolt of water\nCertain reactant accessories will cause the water to react and become any number of damaging projectiles");
         }
     }

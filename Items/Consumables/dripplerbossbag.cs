@@ -46,15 +46,15 @@ namespace HavenMod.Items.Consumables
                 }
             if (Main.rand.Next(7) == 0)
             {
-                player.QuickSpawnItem(mod.ItemType("MoneyTrough"));
+                player.QuickSpawnItem(ItemID.MoneyTrough);
             }
             if (Main.rand.Next(7) == 0)
             {
-                player.QuickSpawnItem(mod.ItemType("SharkToothNecklace"));
+                player.QuickSpawnItem(ItemID.SharkToothNecklace);
             }
             if (Main.rand.Next(7) == 0)
             {
-                player.QuickSpawnItem(mod.ItemType("Sextant"));
+                player.QuickSpawnItem(ItemID.Sextant);
             }				
         }
     }

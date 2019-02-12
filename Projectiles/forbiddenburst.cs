@@ -11,10 +11,10 @@ namespace HavenMod.Projectiles
         {
             projectile.aiStyle = 1;
             projectile.friendly = true;
-            projectile.penetrate = 3;
+            projectile.penetrate = 1;
             projectile.width = 14;
             projectile.height = 24;
-            projectile.timeLeft = 20;
+            projectile.timeLeft = 120;
             aiType = ProjectileID.Bullet;
         }
 
